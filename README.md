@@ -58,18 +58,21 @@
 
 ## Installation
 
-Clone the repository and copy the theme into `~/.icons`:
+Clone the repository and run the install script. It copies the themes into `~/.icons`:
 
 ```sh
 git clone https://github.com/kanagawa-community/cursors
-mkdir -p ~/.icons
-cp -r cursors/themes/Kanagawa-Wave ~/.icons/
+cd cursors
+./install.sh
 ```
 
-For Dragon or Lotus, copy `Kanagawa-Dragon` or `Kanagawa-Lotus` instead.
+`./install.sh` installs all three variants. Name the ones you want instead, for
+example `./install.sh dragon lotus`. Run it again after `git pull` to update.
+`./uninstall.sh` takes the same names and removes them.
 
-Use `~/.icons`, not `~/.local/share/icons`: KDE Plasma's cursor settings do not list
-cursor themes from the second folder, and the global theme cannot apply them from there.
+The script uses `~/.icons`, not `~/.local/share/icons`: KDE Plasma's cursor settings do
+not list cursor themes from the second folder, and the global theme cannot apply them
+from there.
 
 ## Usage
 
