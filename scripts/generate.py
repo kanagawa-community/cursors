@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Build themes/Kanagawa-<Variant>/: the Vimix cursors (src/) recolored by palette role.
+"""Build themes/Kanagawa-<Variant>/: the Vimix cursors (upstream/src/) recolored by palette role.
 
-Dark variants start from src/svg (dark body, light outline), light ones from src/svg-white.
+Dark variants start from upstream/src/svg (dark body, light outline), light ones from upstream/src/svg-white.
 Each source colour is swapped for a palette role, the SVGs are rendered with rsvg-convert,
-and xcursorgen packs them using Vimix's own src/config and src/cursorList.
+and xcursorgen packs them using Vimix's own upstream/src/config and upstream/src/cursorList.
 
 Usage: scripts/generate.py [path/to/palette.json]   (default: ../.github/palette.json)
 Needs rsvg-convert (librsvg) and xcursorgen (xorg-xcursorgen).
@@ -17,9 +17,9 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT / "src"
+SRC = ROOT / "upstream" / "src"
 VARIANTS = ["wave", "dragon", "lotus"]
-# Vimix renders each nominal size (24, 30, 36, 48 in src/config) at these pixel sizes.
+# Vimix renders each nominal size (24, 30, 36, 48 in upstream/src/config) at these pixel sizes.
 SIZES = {"x1": 32, "x1_25": 40, "x1_5": 48, "x2": 64}
 
 # Body and outline, per source set: the dark set has a dark body and light outline,
