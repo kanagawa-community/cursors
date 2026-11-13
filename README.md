@@ -114,13 +114,13 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 GPL-3.0, like Vimix cursors. See [LICENSE](LICENSE). Each theme in `themes/` carries a
 copy of the license, since it is installed on its own.
 
-The cursor shapes in `src/` are [Vimix cursors](https://github.com/vinceliuice/Vimix-cursors)
+The cursor shapes in the `upstream/` submodule are [Vimix cursors](https://github.com/vinceliuice/Vimix-cursors)
 by Vince Liuice (GPL-3.0), unchanged from commit
 [`9bc292f`](https://github.com/vinceliuice/Vimix-cursors/tree/9bc292f). Vimix cursors are
 based on [Capitaine cursors](https://github.com/keeferrourke/capitaine-cursors), copyright
 2016 Keefer Rourke and others (LGPL-3.0), which are based on the KDE Breeze cursors.
 
 Kanagawa Community contributors modified this work in November 2026 and later: the themes
-in `themes/` are the cursors in `src/` with their colors replaced by
+in `themes/` are the cursors in `upstream/src/` with their colors replaced by
 `scripts/generate.py`, built with that script instead of Vimix's `build.sh`. Git
 history records every change.

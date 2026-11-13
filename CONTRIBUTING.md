@@ -30,9 +30,12 @@ To read the colors from a script, use the machine-readable
 
 ## Working on this port
 
-`src/` is a copy of Vimix cursors' `src/` folder (SVGs, `config/`, `cursorList`) from
-commit [`9bc292f`](https://github.com/vinceliuice/Vimix-cursors/tree/9bc292f). Leave it
-unchanged so it can be updated from upstream.
+`upstream/` is a Git submodule of Vimix cursors, pinned to commit
+[`9bc292f`](https://github.com/vinceliuice/Vimix-cursors/tree/9bc292f). The generator reads
+its `src/` folder (SVGs, `config/`, `cursorList`). Clone with `--recurse-submodules`, or
+run `git submodule update --init` in an existing clone. Users who only install the theme
+do not need it. Do not change it. To update it, check out the new commit inside
+`upstream/`, commit the new pointer, and regenerate.
 
 `themes/` is generated. Do not edit it by hand. `scripts/generate.py` reads the shared
 `palette.json` from a sibling checkout of the
